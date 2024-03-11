@@ -1,11 +1,28 @@
- <nav class="blue darken-4">
+<!-- Навигационная панель с классами для стилизации -->
+<nav class="blue darken-4">
+    <!-- Контейнер для навигационных элементов -->
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo">Todos</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        
-        <li><a href="/">Todos</a></li>
-        <li><a href="/create">Create</a></li>
-        
-      </ul>
+        <!-- Ссылка на главную страницу с классом для логотипа -->
+        <a href="/" class="brand-logo">Todos</a>
+        <!-- Список ссылок для навигации, скрытый на средних и маленьких экранах -->
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+            <!-- Проверяем, является ли текущая страница главной -->
+            {{#if isIndex}}
+            <!-- Если да, то ссылка на главную страницу выделяется -->
+            <li class="active"><a href="/">Todos</a></li>
+            {{else}}
+            <!-- Если нет, то ссылка на главную страницу отображается без выделения -->
+            <li><a href="/">Todos</a></li>
+            {{/if}}
+            <!-- Проверяем, является ли текущая страница страницей создания новой задачи -->
+            {{#if isCreate}}
+            <!-- Если да, то ссылка на страницу создания выделяется -->
+            <li class="active"><a href="/create">Create</a></li>
+            {{else}}
+            <!-- Если нет, то ссылка на страницу создания отображается без выделения -->
+            <li><a href="/create">Create</a></li>
+            {{/if}}
+        </ul>
     </div>
-  </nav>
+</nav>
