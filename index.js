@@ -16,9 +16,19 @@ const PORT = process.env.PORT ||  3000;
 const app = express();
 // Создаем новый экземпляр движка шаблонов Express Handlebars с настройками по умолчанию
 const hbs = exphbs.create({
-    defaultLayout: 'main', // Устанавливаем основной макет для шаблонов
-    extname: 'hbs', // Расширение файлов шаблонов
-    
+    // Устанавливаем 'main' в качестве основного макета для всех шаблонов
+    defaultLayout: 'main',
+    // Указываем, что расширение файлов шаблонов должно быть '.hbs'
+    extname: 'hbs',
+    // Разрешаем доступ к свойствам прототипа объектов по умолчанию
+    allowProtoPropertiesByDefault: true,
+    // Опции времени выполнения для Handlebars
+    runtimeOptions: {
+        // Разрешаем доступ к свойствам прототипа объектов по умолчанию
+        allowProtoPropertiesByDefault: true,
+        // Разрешаем вызов методов прототипа объектов по умолчанию
+        allowProtoMethodsByDefault: true
+    }
 });
 // Регистрируем движок шаблонов Express Handlebars в приложении Express
 app.engine('hbs', hbs.engine);
