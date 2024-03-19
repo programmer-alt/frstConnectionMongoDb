@@ -17,14 +17,15 @@ const app = express();
 // Создаем новый экземпляр движка шаблонов Express Handlebars с настройками по умолчанию
 const hbs = exphbs.create({
     defaultLayout: 'main', // Устанавливаем основной макет для шаблонов
-    extname: 'hbs' // Расширение файлов шаблонов
+    extname: 'hbs', // Расширение файлов шаблонов
+    
 });
 // Регистрируем движок шаблонов Express Handlebars в приложении Express
 app.engine('hbs', hbs.engine);
 // Устанавливаем движок шаблонов Express Handlebars в качестве основного движка шаблонов для приложения Express
-app.set('view engine', 'hbs');
+app.set('view engine','hbs');
 // Указываем директорию, где Express будет искать файлы шаблонов
-app.set('views', 'views');
+app.set('views','views');
 // Включает поддержку парсинга тела запросов с типом контента application/x-www-form-urlencoded.
 // Параметр {extended: true} позволяет использовать расширенный парсинг, который поддерживает более сложные структуры данных,
 // такие как вложенные объекты и массивы, в отличие от стандартного парсинга, который может обрабатывать только простые пары ключ-значение.
@@ -38,11 +39,7 @@ async function start() {
     try {
         // Подключаемся к MongoDB с помощью строки подключения
         await mongoose.connect('mongodb+srv://tom:vadim1988@cluster0.tw0doh9.mongodb.net/todos', {
-            // Включаем новый парсер URL для обработки строк подключения
-            useNewUrlParser: true,
-            // Отключаем использование устаревшей опции useUnifiedTopology
-            useUnifiedTopology: false
-            // Отключаем использование метода findAndModify, который может вызвать проблемы совместимости
+          
         });
 
         // Запускаем сервер на порту, определенном в переменной PORT
