@@ -10,20 +10,23 @@
  <!-- Создаем элемент списка для каждой задачи -->
  <li class="todo">
     <!-- Создаем метку для задачи -->
+    <form action="complete" method="post">
     <label>
         <!-- Если задача выполнена, отображаем галочку и класс "completed" -->
         {{#if completed}}
-        <input type="checkbox" checked >
+        <input type="checkbox" checked name="completed">
         <span class="completed">{{title}}</span>
         <!-- Если задача не выполнена, отображаем пустую галочку -->
         {{else}}
-        <input type="checkbox" >
+        <input type="checkbox" name="completed">
         <span>{{title}}</span>
         {{/if}}
 
+        <input type="hidden" value="{{_id}}" name="id">
         <!-- Кнопка для сохранения изменений задачи -->
-        <button class="btn btn-small">Save</button>
+        <button class="btn btn-small" type="submit">Save</button>
     </label>
+    </form>
  </li>
 {{/each}}
 </ul>
