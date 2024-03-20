@@ -4,7 +4,7 @@
 
 ## Ключевые файлы и их функциональность
 
-### `index.js`
+### `index.js`  кликай чтобы увидеть код [**index.js**](https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/index.js)
 - **Назначение**: Главная точка входа в приложение. Она настраивает сервер Express, подключается к базе данных MongoDB и включает маршруты для обработки HTTP-запросов.
 - **Ключевые функции**:
  - Инициализирует приложение Express.
@@ -12,53 +12,53 @@
  - Конфигурирует промежуточное ПО для анализа тел запросов и обслуживания статических файлов.
  - Подключается к базе данных MongoDB с использованием Mongoose.
  - Включает маршруты для обработки HTTP-запросов.
-   [**index.js**](https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/index.js)
+   
 
 
-### `routes/todos.js`
+### `routes/todos.js`  кликай чтобы увидеть код [**todos.js**](https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/routes/todos.js)
 - **Назначение**: Содержит обработчики маршрутов для управления задачами.
 - **Ключевые функции**:
  - Определяет маршруты для вывода всех задач, создания новой задачи, пометки задачи как выполненной и удаления задачи.
  - Использует асинхронные функции для взаимодействия с базой данных MongoDB.
  - Перенаправляет пользователя на соответствующую страницу после выполнения действий, таких как создание или обновление задачи.
 
-### `models/Todo.js`
+### `models/Todo.js`  кликай чтобы увидеть код [**Todo.js**](https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/routes/todos.js)
 - **Назначение**: Определяет модель Mongoose для задач.
 - **Ключевые функции**:
  - Указывает схему для задач, включая поля для заголовка задачи и статуса выполнения.
  - Экспортирует модель для использования в других частях приложения.
 
-### `views/index.hbs`
+### `views/index.hbs` кликай чтобы увидеть код [**index.hbs**](https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/views/index.hbs)
 - **Назначение**: Основное представление для отображения задач.
 - **Ключевые функции**:
  - Выводит список всех задач, показывая их заголовки и статус выполнения.
  - Предоставляет форму для пометки задач как выполненных.
  - Включает ссылку для создания новой задачи.
 
-### `views/create.hbs`
+### `views/create.hbs` кликай чтобы увидеть код [**create.hbs**](https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/views/create.hbs)
 - **Назначение**: Представление для создания новой задачи.
 - **Ключевые функции**:
  - Содержит форму для ввода заголовка задачи.
  - Включает кнопку для отправки формы и создания задачи.
 
-### `views/layouts/main.hbs`
+### `views/layouts/main.hbs` кликай чтобы увидеть код [**main.hbs**](https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/views/layouts/main.hbs)
 - **Назначение**: Основная макетная шаблон для приложения.
 - **Ключевые функции**:
  - Включает общие элементы, такие как заголовок и навигационную панель.
  - Предоставляет контейнер для отображения содержимого отдельных представлений.
 
-### `views/partials/head.hbs`
+### `views/partials/head.hbs` кликай чтобы увидеть код [**head.hbs**](https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/views/partials/head.hbs)
 - **Назначение**: Частичный шаблон для секции head HTML-документов.
 - **Ключевые функции**:
  - Включает мета-теги, ссылки на таблицы стилей и заголовок страницы.
 
-### `views/partials/navbar.hbs`
+### `views/partials/navbar.hbs` кликай чтобы увидеть код [**navbar.hbs**](https://github.com/programmeralt/frstConnectionMongoDb/blob/master/views/partials/navbar.hbs)
 - **Назначение**: Частичный шаблон для навигационной панели.
 - **Ключевые функции**:
  - Предоставляет ссылки на главную страницу задач и страницу создания задачи.
  - Выделяет активную страницу в навигационной панели.
 
-### `public/index.css`
+### `public/index.css` кликай чтобы увидеть код [**index.css**](https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/routes/public/index.css)
 - **Назначение**: Таблица стилей для приложения.
 - **Ключевые функции**:
  - Содержит CSS-правила для стилизации представлений приложения.
