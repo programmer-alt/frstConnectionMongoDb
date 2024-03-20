@@ -2,7 +2,7 @@
 const express = require('express');
 // Импортируем модуль Express Handlebars и сохраняем его в переменную exphbs
 const exphbs = require('express-handlebars');
-
+const path = require('path')
 // Импортируем модуль Mongoose и сохраняем его в переменную mongoose
 const mongoose = require('mongoose');
 // Импортируем маршруты задач (todos) и сохраняем их в переменную TodoRoutes
@@ -40,7 +40,7 @@ app.set('views','views');
 // Параметр {extended: true} позволяет использовать расширенный парсинг, который поддерживает более сложные структуры данных,
 // такие как вложенные объекты и массивы, в отличие от стандартного парсинга, который может обрабатывать только простые пары ключ-значение.
 app.use (express.urlencoded({extended: true}))
-
+app.use(express.static(path.join(__dirname,'public')))
 // Используем маршруты задач (todos) в приложении Express
 app.use(TodoRoutes);
 

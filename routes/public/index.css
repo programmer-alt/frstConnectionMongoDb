@@ -12,4 +12,9 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    background: goldenrod;
+    padding: 1rem
+}
+.todo i {
+    z-index: 2;
 }
