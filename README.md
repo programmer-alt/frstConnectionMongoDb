@@ -12,7 +12,8 @@
  - Конфигурирует промежуточное ПО для анализа тел запросов и обслуживания статических файлов.
  - Подключается к базе данных MongoDB с использованием Mongoose.
  - Включает маршруты для обработки HTTP-запросов.
-   нажми на [index.js] (https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/index.js)  чтоб увидеть код
+   [**index.js**](https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/index.js)
+
 
 ### `routes/todos.js`
 - **Назначение**: Содержит обработчики маршрутов для управления задачами.
