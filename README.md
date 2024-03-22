@@ -22,7 +22,7 @@
  - Использует асинхронные функции для взаимодействия с базой данных MongoDB.
  - Перенаправляет пользователя на соответствующую страницу после выполнения действий, таких как создание или обновление задачи.
 
-### `models/Todo.js`  кликай чтобы увидеть код [**Todo.js**](https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/routes/todos.js)
+### `models/Todo.js`  кликай чтобы увидеть код [**Todo.js**](https://github.com/programmer-alt/frstConnectionMongoDb/blob/master/models/Todo.js)
 - **Назначение**: Определяет модель Mongoose для задач.
 - **Ключевые функции**:
  - Указывает схему для задач, включая поля для заголовка задачи и статуса выполнения.
