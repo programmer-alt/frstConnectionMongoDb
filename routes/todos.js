@@ -37,7 +37,7 @@ router.post('/create', async (req, res) => {
     // Создаем новый экземпляр модели Todo с данными из запроса
     console.log(req.body)
     const todo = new Todo({
-        title: 'azazaaza', // Заголовок задачи берется из тела запроса
+        title: req.body.title, // Заголовок задачи берется из тела запроса
 
     })
     // Сохраняем созданный объект в базе данных
